@@ -27,4 +27,18 @@ router.route('/products').get(ProductController.getAllProducts);
 // @access  Public
 router.route('/products/:id').get(ProductController.getSingleProduct);
 
+
+//@rout PATCH api/v1/products/bulk-update
+//@desc update multiple products
+//@access admin
+router.route('/products/bulk-update').patch(ProductController.bulkUpdateProductService);
+router.route('/products/Individual-bulk-update').patch(ProductController.bulkUpdateIndividualProductService);
+router.route('/products/bulk-delete').delete(ProductController.bulkDeleteProductService);
+
+
+// @route   PATCH api/v1/products/:id
+// @desc    Update a single product
+// @access  admin
+router.route('/products/:id').patch(ProductController.updateProduct).delete(ProductController.deleteProduct);
+
 module.exports = router;
