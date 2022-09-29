@@ -22,6 +22,12 @@ router.route('/product').post(ProductController.createProduct);
 router.route('/products').get(ProductController.getAllProducts);
 
 
+// @route   GET api/v1/productsByFeatures
+// @desc    Get all productsByFeatures
+// @access  Public
+router.route('/productsByFeatures').get(ProductController.getProductsByFeatures);
+
+
 // @route   GET api/v1/products/:id
 // @desc    Get a single product
 // @access  Public

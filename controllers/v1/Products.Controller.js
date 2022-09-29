@@ -216,13 +216,11 @@ exports.bulkUpdateIndividualProductService = async (req, res, next) => {
   }
 };
 
-
 // delete product by id
 exports.deleteProduct = async (req, res, next) => {
   try {
     const { id } = req.params;
 
-    
     const result = await ProductModel.findByIdAndDelete(id);
 
     res.status(200).json({
@@ -238,8 +236,6 @@ exports.deleteProduct = async (req, res, next) => {
   }
 };
 
-
-
 // bulk delete products
 exports.bulkDeleteProductService = async (req, res, next) => {
   try {
@@ -247,7 +243,7 @@ exports.bulkDeleteProductService = async (req, res, next) => {
 
     const result = await ProductModel.deleteMany({ _id: idsArray });
 
-    if(!result.deletedCount){
+    if (!result.deletedCount) {
       throw new Error("No product found to delete");
     }
 
@@ -255,6 +251,64 @@ exports.bulkDeleteProductService = async (req, res, next) => {
       success: true,
       message: "Product deleted successfully",
       result,
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+// GET  products by features (query | pagination | sorting | filtering)
+exports.getProductsByFeatures = async (req, res, next) => {
+  try {
+    let filters = { ...req.query };
+
+    // step-1: req.query থেকে page,limit,sort নামের key value গুলোকে exclude করে আলাদা করে দিব
+    const excludedFields = ["page", "limit", "sort", "fields"];
+    excludedFields.forEach((field) => delete filters[field]);
+
+    // step-2 [filtering,filteringByRange,sorting,specific fieldsk,pagination]:
+
+    // advance filtering এর জন্য আমাদেরকে filter opt এর আগে $ দিতে হবে। এরজন্য filters var কে striginfy করে নিব কাজ শেষে আবার parse করে নিব। অর্থাঠ price: { lt: '200' } => "price":{"$lt":"200"} => {price:{$lt:"200"}}
+
+    const filtersStr = JSON.stringify(filters).replace(
+      /\b(gte|gt|lte|lt)\b/g,
+      (match) => `$${match}`
+    );
+    filters = JSON.parse(filtersStr);
+
+    const queries = {};
+    if (req.query.fields) {
+      const fields = req.query.fields.split(",").join(" "); // "price,name" => "price name"
+      queries.fields = fields;
+    }
+    if (req.query.sort) {
+      const sortBy = req.query.sort.split(",").join(" "); // "price,name" => "price name"
+      queries.sortBy = sortBy;
+    }
+    if (req.query.page) {
+      const { page = 1, limit = 5 } = req.query;
+      const skip = (parseInt(page) - 1) * parseInt(limit);
+      queries.skip = skip;
+      queries.limit = Number(limit);
+    }
+    console.log(req.query.page,queries);
+    const products = await ProductModel.find(filters)
+      .skip(queries.skip)
+      .limit(queries.limit)
+      .select(queries.fields)
+      .sort(queries.sortBy);
+
+      const totalProducts = await ProductModel.countDocuments(filters);
+      const pageCount = Math.ceil(totalProducts / queries.limit);
+
+    res.status(200).json({
+      success: true,
+      message: `All ${totalProducts} products`,
+      pageCount,
+      products,
     });
   } catch (error) {
     res.status(400).json({
