@@ -7,23 +7,23 @@ const BrandSchema = new mongoose.Schema(
     name: {
       type: String,
       trim: true, //removes extra white space from username
-      required: [true, "Product brand name is required"],
-      maxlength: [100, "Product name must be less than 100 characters long"],
-      unique: [true, "Product name must be unique"],
-      minlength: [3, "Product name must be at least 3 characters long"],
+      required: [true, "Brand brand name is required"],
+      maxlength: [100, "Brand name must be less than 100 characters long"],
+      unique: [true, "Brand name must be unique"],
+      minlength: [3, "Brand name must be at least 3 characters long"],
       lowercase: true, // to unsure unique name 
     },
     description: {
       type: String,
-      required: [true, "Product description is required"],
+      required: [true, "Brand description is required"],
       minlength: [
         20,
-        "Product description must be at least 20 characters long",
+        "Brand description must be at least 20 characters long",
       ],
     },
     email: {
       type: String,
-      required: [true, "Product email is required"],
+      required: [true, "email is required"],
       validate: [validator.isEmail, "Please provide a valid email"],
       lowercase: true,
     },
@@ -43,7 +43,7 @@ const BrandSchema = new mongoose.Schema(
     ],
 
     /* suppler কিন্তু অতটা important কিছু না যে এর জন্য mendatory একতা model generate করা লাগবে তাই আমরা hardcoded করে তার details রেখে দিব আর পাশাপাশি id ও রাখব যদি future এ কখনো model বানানো লাগে তার জন্য */
-    supplier: {
+    suppliers: {
       id: {
         type: ObjectId,
         ref: "Supplier",

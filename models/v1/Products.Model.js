@@ -1,14 +1,142 @@
+// const mongoose = require("mongoose");
+
+// const ProductSchema = new mongoose.Schema(
+//   {
+//     name: {
+//       type: String,
+//       required: [true, "Product name is required"],
+//       trim: true, //removes extra white space from username
+//       unique: [true, "Product name must be unique"],
+//       minlength: [3, "Product name must be at least 3 characters long"],
+//       maxlength: [20, "Product name must be less than 20 characters long"],
+//     },
+//     description: {
+//       type: String,
+//       required: [true, "Product description is required"],
+//       minlength: [
+//         20,
+//         "Product description must be at least 20 characters long",
+//       ],
+//     },
+//     price: {
+//       type: Number,
+//       required: [true, "Product price is required"],
+//       min: [0, "Product price must be at least 0"],
+//     },
+//     unit: {
+//       type: String,
+//       required: [true, "Product unit is required"],
+//       // enum: ["kg", "litre", "pcs"] //only these values are allowed as unit
+//       enum: {
+//         values: ["kg", "litre", "pcs"],
+//         message:
+//           "Product unit can't be {VALUE} must be either kg, litre or pcs",
+//       },
+//     },
+//     quantity: {
+//       type: Number,
+//       required: [true, "Product quantity is required"],
+//       min: [0, "Product quantity must be at least 0"],
+//       default: 0,
+//       validate: {
+//         validator: function (value) {
+//           const isInteger = Number.isInteger(value);
+//           if (!isInteger) {
+//             return false;
+//           } else {
+//             return true;
+//           }
+//         },
+//       },
+//       message: "Product quantity must be an integer",
+//     },
+//     status: {
+//       type: String,
+//       required: [true, "Product status is required"],
+//       enum: {
+//         values: ["in-stock", "out-of-stock", "unavailable"],
+//         message:
+//           "Product status can't be {VALUE} must be either in-stock, out-of-stock or unavailable",
+//       },
+//     },
+
+//     // category is itself has an schema will generate later
+//     categories: [
+//       {
+//         name: {
+//           type: String,
+//           required: [true, "Product category name is required"],
+//         },
+//         _id: mongoose.Schema.Types.ObjectId,
+//       },
+//     ],
+
+//     // // Supplier info is reffered from another model
+//     // supplier: {
+//     //     type: mongoose.Schema.Types.ObjectId,
+//     //     ref: "Supplier"
+//     // },
+
+//     // // alternative to timestamps
+//     // createdAt: {
+//     //     type: Date,
+//     //     default: Date.now
+//     // },
+//     // updatedAt: {
+//     //     type: Date,
+//     //     default: Date.now
+//     // }
+//   },
+//   {
+//     // this is the options object
+//     timestamps: true,
+//     // _id: false, toJSON: { virtuals: true }, toObject: { virtuals: true }, versionKey: false
+//   }
+// );
+
+// // applying instance methods to the schema
+// ProductSchema.pre("save", function (next) {
+//   // this is a middleware
+
+//   if (this.quantity == 0) {
+//     this.status = "out-of-stock";
+//   } /* here this refers to the document which is posting by createProduct */
+
+//   console.log("Product is about to be saved");
+//   next();
+// });
+
+// // hiding post instance for the schema cause not of use now
+// // ProductSchema.post("save", function (doc, next) { // this is a middleware
+// //     console.log("Product has been saved");
+// //     next();
+// // });
+
+// // applying  methods to the schema
+// ProductSchema.methods.logger = function () {
+//   console.log(`data saved for ${this.name}`);
+// };
+
+// // module.exports.ProductModel = mongoose.model('Product', ProductSchema);
+// const ProductModel = mongoose.model("Product", ProductSchema);
+// module.exports = ProductModel;
+
+
+
 const mongoose = require("mongoose");
+const validator = require("validator");
+const { ObjectId } = mongoose.Schema.Types;
 
 const ProductSchema = new mongoose.Schema(
   {
     name: {
       type: String,
       required: [true, "Product name is required"],
-      trim: true, //removes extra white space from username
+      trim: true,
       unique: [true, "Product name must be unique"],
       minlength: [3, "Product name must be at least 3 characters long"],
       maxlength: [20, "Product name must be less than 20 characters long"],
+      lowercase: true,
     },
     description: {
       type: String,
@@ -18,74 +146,55 @@ const ProductSchema = new mongoose.Schema(
         "Product description must be at least 20 characters long",
       ],
     },
-    price: {
-      type: Number,
-      required: [true, "Product price is required"],
-      min: [0, "Product price must be at least 0"],
-    },
     unit: {
       type: String,
       required: [true, "Product unit is required"],
-      // enum: ["kg", "litre", "pcs"] //only these values are allowed as unit
       enum: {
-        values: ["kg", "litre", "pcs"],
+        values: ["kg", "litre", "pcs", "bag"],
         message:
-          "Product unit can't be {VALUE} must be either kg, litre or pcs",
+          "Product unit can't be {VALUE} must be either kg, litre or pcs,bag",
       },
     },
-    quantity: {
-      type: Number,
-      required: [true, "Product quantity is required"],
-      min: [0, "Product quantity must be at least 0"],
-      default: 0,
-      validate: {
-        validator: function (value) {
-          const isInteger = Number.isInteger(value);
-          if (!isInteger) {
-            return false;
-          } else {
-            return true;
-          }
-        },
-      },
-      message: "Product quantity must be an integer",
-    },
-    status: {
-      type: String,
-      required: [true, "Product status is required"],
-      enum: {
-        values: ["in-stock", "out-of-stock", "unavailable"],
-        message:
-          "Product status can't be {VALUE} must be either in-stock, out-of-stock or unavailable",
-      },
-    },
-
-    // category is itself has an schema will generate later
-    categories: [
+    imageURLs: [
       {
-        name: {
-          type: String,
-          required: [true, "Product category name is required"],
+        type: String,
+        required: [true, "Images are required"],
+        validate: {
+          validator: (value) => {
+            /* test value is array or not */
+            if (!Array.isArray(value)) {
+              return false;
+            }
+
+            /* test url is valid or not */
+            let isURLValid = true;
+            value.forEach((url) => {
+              if (!validator.isURL(url)) {
+                isURLValid = false;
+              }
+            });
+            return isURLValid;
+          },
+          message: "Images are required to be valid",
         },
-        _id: mongoose.Schema.Types.ObjectId,
+        message: "Product quantity must be an integer",
       },
     ],
+    category: {
+      type: String,
+      required: [true, "Product category is required"],
+    },
+    brand: {
+      name: {
+        type: String,
+        required: [true, "Product brand name is required"],
+      },
+      id: {
+        type: ObjectId,
+        ref: "Brand",
+      },
+    },
 
-    // // Supplier info is reffered from another model
-    // supplier: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "Supplier"
-    // },
-
-    // // alternative to timestamps
-    // createdAt: {
-    //     type: Date,
-    //     default: Date.now
-    // },
-    // updatedAt: {
-    //     type: Date,
-    //     default: Date.now
-    // }
   },
   {
     // this is the options object
@@ -107,19 +216,5 @@ ProductSchema.pre("save", function (next) {
 });
 
 
-// hiding post instance for the schema cause not of use now
-// ProductSchema.post("save", function (doc, next) { // this is a middleware
-//     console.log("Product has been saved");
-//     next();
-// });
-
-
-
-// applying  methods to the schema
-ProductSchema.methods.logger = function () {
-  console.log(`data saved for ${this.name}`);
-};
-
-// module.exports.ProductModel = mongoose.model('Product', ProductSchema);
 const ProductModel = mongoose.model("Product", ProductSchema);
 module.exports = ProductModel;

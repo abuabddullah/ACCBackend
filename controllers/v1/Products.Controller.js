@@ -1,11 +1,5 @@
 const ProductModel = require("./../../models/v1/Products.Model");
 
-exports.isRouteWorking = (req, res, next) => {
-  res.status(200).json({
-    success: true,
-    message: "Route is working fine",
-  });
-};
 
 // POST a new product
 exports.createProduct = async (req, res, next) => {

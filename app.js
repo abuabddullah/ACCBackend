@@ -9,10 +9,12 @@ app.use(cors());
 
 // import routes
 const productsRoute = require("./routes/v1/Products.Route");
+const brandsRoute = require("./routes/v1/Brands.Route");
 
 
 // route middlewares
 app.use("/api/v1", productsRoute);
+app.use("/api/v1", brandsRoute);
 
 app.get("/", (req, res) => {
   res.send("Route is working! YaY!");
