@@ -1,6 +1,5 @@
 const ProductModel = require("./../../models/v1/Products.Model");
 
-
 // POST a new product
 exports.createProduct = async (req, res, next) => {
   try {
@@ -288,21 +287,36 @@ exports.getProductsByFeatures = async (req, res, next) => {
       queries.skip = skip;
       queries.limit = Number(limit);
     }
-    console.log(req.query.page,queries);
+    console.log(req.query.page, queries);
     const products = await ProductModel.find(filters)
       .skip(queries.skip)
       .limit(queries.limit)
       .select(queries.fields)
       .sort(queries.sortBy);
 
-      const totalProducts = await ProductModel.countDocuments(filters);
-      const pageCount = Math.ceil(totalProducts / queries.limit);
+    const totalProducts = await ProductModel.countDocuments(filters);
+    const pageCount = Math.ceil(totalProducts / queries.limit);
 
     res.status(200).json({
       success: true,
       message: `All ${totalProducts} products`,
       pageCount,
       products,
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+exports.fileUpload = async (req, res, next) => {
+  try {
+    res.status(200).json({
+      success: true,
+      message: "Image uploaded successfully",
+      result: req.file,
     });
   } catch (error) {
     res.status(400).json({

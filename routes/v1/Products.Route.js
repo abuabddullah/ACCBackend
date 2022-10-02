@@ -1,7 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const uploader = require('./../../middleware/multerUploader');
 
 const ProductController = require('../../controllers/v1/Products.Controller');
+
+
+// multer use case1: একটা নতুন route বানিয়ে তার সাহায্যে file upload প্রথমে link generate করে upload করা তারপর সেটা ডাটাবেজে সেভ করা
+router.route('/product/file-upload').post(uploader.single("frontendImgInputTagName_image"), ProductController.fileUpload);
+
 
 
 // @route   POST api/v1/products

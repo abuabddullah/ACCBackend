@@ -1,11 +1,5 @@
 const BrandModel = require("./../../models/v1/Brand.Model");
 
-exports.isRouteWorking = (req, res, next) => {
-  res.status(200).json({
-    success: true,
-    message: "brandController Route is working fine",
-  });
-};
 
 // brand related apis start
 exports.createBrand = async (req, res, next) => {

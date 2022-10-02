@@ -5,10 +5,6 @@ const BrandController = require('./../../controllers/v1/Brands.Controller');
 
 
 
-// @route   GET api/v1/
-// @desc    Get success message
-// @access  Public
-router.route('/').get(BrandController.isRouteWorking);
 
 
 
