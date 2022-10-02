@@ -325,3 +325,18 @@ exports.fileUpload = async (req, res, next) => {
     });
   }
 };
+
+exports.filesUpload = async (req, res, next) => {
+  try {
+    res.status(200).json({
+      success: true,
+      message: "Image uploaded successfully",
+      result: req.files,
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
