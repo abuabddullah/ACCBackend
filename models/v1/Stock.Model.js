@@ -13,9 +13,9 @@ const StockSchema = new mongoose.Schema(
       type: String,
       required: [true, "Stock name is required"],
       trim: true,
-      unique: [true, "Stock name must be unique"],
+      // unique: [true, "Stock name must be unique"],
       minlength: [3, "Stock name must be at least 3 characters long"],
-      maxlength: [20, "Stock name must be less than 20 characters long"],
+      maxlength: [50, "Stock name must be less than 50 characters long"],
       lowercase: true,
     },
     description: {
@@ -36,25 +36,25 @@ const StockSchema = new mongoose.Schema(
       {
         type: String,
         required: [true, "Images are required"],
-        validate: {
-          validator: (value) => {
-            /* test value is array or not */
-            if (!Array.isArray(value)) {
-              return false;
-            }
+        // validate: {
+        //   validator: (value) => {
+        //     /* test value is array or not */
+        //     if (!Array.isArray(value)) {
+        //       return false;
+        //     }
 
-            /* test url is valid or not */
-            let isURLValid = true;
-            value.forEach((url) => {
-              if (!validator.isURL(url)) {
-                isURLValid = false;
-              }
-            });
-            return isURLValid;
-          },
-          message: "Images are required to be valid",
-        },
-        message: "Stock quantity must be an integer",
+        //     /* test url is valid or not */
+        //     let isURLValid = true;
+        //     value.forEach((url) => {
+        //       if (!validator.isURL(url)) {
+        //         isURLValid = false;
+        //       }
+        //     });
+        //     return isURLValid;
+        //   },
+        //   message: "Images are required to be valid",
+        // },
+        validate: [validator.isURL, "Images are required to be valid"],
       },
     ],
     price: {
@@ -99,7 +99,7 @@ const StockSchema = new mongoose.Schema(
         enum: {
           values: [
             "dhaka",
-            "chittagong",
+            "chattogram",
             "khulna",
             "rajshahi",
             "barishal",
@@ -107,7 +107,7 @@ const StockSchema = new mongoose.Schema(
             "rangpur",
           ],
           message:
-            "Store name {VALUE} is not valid. must be one of the following: dhaka, chittagong, khulna, rajshahi, barishal, sylhet, rangpur",
+            "Store name {VALUE} is not valid. must be one of the following: dhaka, chattogram, khulna, rajshahi, barishal, sylhet, rangpur",
         },
       },
       id: {
@@ -140,6 +140,11 @@ const StockSchema = new mongoose.Schema(
         type: ObjectId,
         ref: "Brand",
       },
+    },
+    sellCount: {
+      type: Number,
+      default: 0,
+      min: 0,
     },
   },
   {

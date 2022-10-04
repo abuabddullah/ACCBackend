@@ -229,3 +229,7 @@ module.exports = router;
 4. postman testing
 
 <img width="100%" src="./../folderName_images/1664751404697-299658458-multerTes2t.png">
+
+# Multer S3
+
+- মূলত যদি আমরা অনেক বেশি বড় file আমাদের express এর সাহায্যে store করে রাখতে চাই তাহলে আমাদের **_AWS s3_** paid service use করতে হবে সেক্ষেত্রে আমাদের **multerUploader.js** middleware file যেখানে আমরা **_multer.diskStorage()_** method use করেছি সেখানে **_AWS s3_** এর কোন একটা special configuration(api key, links etc) use করতে হবে

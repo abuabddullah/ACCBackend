@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Mezbaul Abedin Persian",
+    "email": "mezba.pran@test.com",
+    "brand": {
+      "name": "aci",
+      "id": "633627e83cf7260b38fe3b12"
+    },
+    "contactNumber": ["01111111111", "02222222222"],
+    "emergencyContactNumber": "011111111",
+    "tradeLicenceNumber": 1111111111,
+    "presentAddress": "944 Honduras Street",
+    "permanentAddress": "944 Ghana Street",
+    "location": "chattogram",
+    "imageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "nationalIdImageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "status": "active"
+  },
+  {
+    "name": "Abdullah Al Fahim",
+    "email": "fahim.teer@test.com",
+    "brand": {
+      "name": "fresh",
+      "id": "633627fe3cf7260b38fe3b14"
+    },
+    "contactNumber": ["01111111111", "02222222222"],
+    "emergencyContactNumber": "011111111",
+    "tradeLicenceNumber": 1111111111,
+    "presentAddress": "944 Uganda Street",
+    "permanentAddress": "944 Ghana Street",
+    "location": "dhaka",
+    "imageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "nationalIdImageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "status": "active"
+  },
+  {
+    "name": "Jhankar Mahbub",
+    "email": "jhankar.rupchanda@test.com",
+    "brand": {
+      "name": "acme",
+      "id": "6336280d3cf7260b38fe3b16"
+    },
+    "contactNumber": ["01111111111", "02222222222"],
+    "emergencyContactNumber": "011111111",
+    "tradeLicenceNumber": 1111111111,
+    "presentAddress": "944 Honduras Street",
+    "permanentAddress": "944 Ghana Street",
+    "location": "dhaka",
+    "imageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "nationalIdImageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "status": "active"
+  },
+  {
+    "name": "Rasel Ahmed",
+    "email": "rasel.fresh@test.com",
+    "brand": {
+      "name": "square",
+      "id": "633628193cf7260b38fe3b18"
+    },
+    "contactNumber": ["01111111111", "02222222222"],
+    "emergencyContactNumber": "011111111",
+    "tradeLicenceNumber": 1111111111,
+    "presentAddress": "944 Honduras Street",
+    "permanentAddress": "944 Ghana Street",
+    "location": "chattogram",
+    "imageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "nationalIdImageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "status": "active"
+  }
+]

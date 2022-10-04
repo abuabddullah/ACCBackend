@@ -12,7 +12,7 @@ const StoreSchema = new mongoose.Schema(
       enum: {
         values: [
           "dhaka",
-          "chittagong",
+          "chattogram",
           "khulna",
           "rajshahi",
           "barishal",
@@ -20,7 +20,7 @@ const StoreSchema = new mongoose.Schema(
           "rangpur",
         ],
         message:
-          "Store name {VALUE} is not valid. must be one of the following: dhaka, chittagong, khulna, rajshahi, barishal, sylhet, rangpur",
+          "Store name {VALUE} is not valid. must be one of the following: dhaka, chattogram, khulna, rajshahi, barishal, sylhet, rangpur",
       },
     },
     description: {

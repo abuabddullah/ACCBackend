@@ -135,7 +135,7 @@ const ProductSchema = new mongoose.Schema(
       trim: true,
       unique: [true, "Product name must be unique"],
       minlength: [3, "Product name must be at least 3 characters long"],
-      maxlength: [20, "Product name must be less than 20 characters long"],
+      maxlength: [50, "Product name must be less than 50 characters long"],
       lowercase: true,
     },
     description: {
@@ -159,25 +159,25 @@ const ProductSchema = new mongoose.Schema(
       {
         type: String,
         required: [true, "Images are required"],
-        validate: {
-          validator: (value) => {
-            /* test value is array or not */
-            if (!Array.isArray(value)) {
-              return false;
-            }
+        // validate: {
+        //   validator: (value) => {
+        //     /* test value is array or not */
+        //     if (!Array.isArray(value)) {
+        //       return false;
+        //     }
 
-            /* test url is valid or not */
-            let isURLValid = true;
-            value.forEach((url) => {
-              if (!validator.isURL(url)) {
-                isURLValid = false;
-              }
-            });
-            return isURLValid;
-          },
-          message: "Images are required to be valid",
-        },
-        message: "Product quantity must be an integer",
+        //     /* test url is valid or not */
+        //     let isURLValid = true;
+        //     value.forEach((url) => {
+        //       if (!validator.isURL(url)) {
+        //         isURLValid = false;
+        //       }
+        //     });
+        //     return isURLValid;
+        //   },
+        //   message: "Images are required to be valid",
+        // },
+        validate: [validator.isURL, "Images are required to be valid"],
       },
     ],
     category: {
