@@ -3,6 +3,8 @@ const router = express.Router();
 const uploader = require("./../../middleware/multerUploader");
 
 const ProductController = require("../../controllers/v1/Products.Controller");
+const { verifyJWT } = require("../../middleware/verifyJWT");
+const { verifyRole } = require("../../middleware/verifyRole");
 
 router
   .route("/product/file-upload")
@@ -23,7 +25,9 @@ router
 // @route   POST api/v1/products
 // @desc    Create a new product
 // @access  admin
-router.route("/product").post(ProductController.createProduct);
+// router.route("/product").post(ProductController.createProduct);
+//module 11-6
+router.route("/product").post(verifyJWT,verifyRole("admin","store-manager"),ProductController.createProduct);
 
 // @route   GET api/v1/products
 // @desc    Get all products
@@ -61,6 +65,8 @@ router
 router
   .route("/products/:id")
   .patch(ProductController.updateProduct)
-  .delete(ProductController.deleteProduct);
+  
+//module 11-6
+  .delete(verifyJWT,verifyRole("admin"),ProductController.deleteProduct);
 
 module.exports = router;

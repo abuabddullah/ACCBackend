@@ -55,7 +55,7 @@ exports.verifyJWT = async (req, res, next) => {
     if (!token) {
       return res.status(401).json({
         success: false,
-        message: "Auth failed",
+        message: "Auth failed verifyJWT implemented",
       });
     }
 
