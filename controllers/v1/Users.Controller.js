@@ -1,15 +1,26 @@
 const UserModel = require("./../../models/v1/User.Model");
 const bcrypt = require("bcryptjs");
 const { generateToken } = require("../../utils/jwt");
+const { sendMailWithGmail } = require("../../utils/sendMailWithGmail");
 
 exports.signup = async (req, res, next) => {
   try {
-    const user = req.body;
-    const result = await UserModel.create(user);
+    const userInfo = req.body;
+    const user = await UserModel.create(userInfo);
+    const token = user.generateConfirmationToken(); // customk method in UserModel
+    await user.save({ validateBeforeSave: false });
+    const mailData = {
+      to: [user.email],
+      subject: "Verify your Account",
+      text: `Thank you for creating your account. Please confirm your account here: ${
+        req.protocol
+      }://${req.get("host")}${req.originalUrl}/confirmation/${token}`,
+    };
+    await sendMailWithGmail(mailData);
     res.status(201).json({
       success: true,
       message: "User created successfully",
-      result,
+      user,
     });
   } catch (error) {
     res.status(400).json({
@@ -100,7 +111,7 @@ exports.login = async (req, res, next) => {
 exports.getMe = async (req, res, next) => {
   try {
     const userInfo = req.user; // here req.user = {email:kdjflkd,password:#####,iat:12345678,exp:12345678} recieved from auth middleware verifyJWT
-    
+
     const user = await UserModel.findOne({ email: userInfo.email });
     res.status(200).json({
       success: true,

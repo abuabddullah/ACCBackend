@@ -47,6 +47,8 @@
 > > now we are in next steps of **Auth Conscent Screen** which is **_Summary_**
 > >
 > > > here nothing to do just click **Back To Dashboard**
+> > >
+> > > > now make the app **publish public**
 >
 > > now from the right side bar select [**Credentials**](https://console.cloud.google.com/apis/credentials?project=accbackend)
 >
@@ -85,5 +87,25 @@
 > > > > put **Input Your Own Scopes** : https://mail.google.com/
 > > > >
 > > > > > now need to confirm login
+> > > > >
+> > > > > > select the account using for google playground
+> > > > >
+> > > > > > **Google hasn’t verified this app**-alert will show click **Advanced** at bottom-left
+> > > > > >
+> > > > > > > click **Go to ACCBackend (unsafe)** at bottom-left
+> > > > > >
+> > > > > > > **ACCBackend wants additional access to your Google Account**-alert will show click **Continue**
+> >
+> > > Step 2 :Exchange authorization code for tokens
+> > >
+> > > > click **Exchange authorization code for tokens** blue button
+> > >
+> > > > copy the **Refresh token**
 
-CLIENT_ID, CLIENT_SECRET, google playground এর REFRESH_TOKEN অবশ্যই **.env** file এ রেখে দিতে হবে
+CLIENT_ID, CLIENT_SECRET, google playground এর REFRESH_TOKEN, SENDER_MAIL অবশ্যই **.env** file এ রেখে দিতে হবে
+
+## conninting project with google mail service
+
+> > install **_nodemailer_** and **_googleapis_** in our project dependencies
+>
+> > dfgfg

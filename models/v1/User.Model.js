@@ -101,10 +101,23 @@ userSchema.pre("save", function (next) {
   next();
 });
 
-userSchema.methods.comparePassword = function (password,hash){
-  const isPasswordCorrect = bcrypt.compareSync(password,hash)
-  return isPasswordCorrect
-}
+userSchema.methods.comparePassword = function (password, hash) {
+  const isPasswordCorrect = bcrypt.compareSync(password, hash);
+  return isPasswordCorrect;
+};
+
+userSchema.methods.generateConfirmationToken = function () {
+  const token = crypto.randomBytes(32).toString("hex");
+
+  this.confirmationToken = token;
+
+  const date = new Date();
+
+  date.setDate(date.getDate() + 1);
+  this.confirmationTokenExpires = date;
+
+  return token;
+};
 
 const UserModel = mongoose.model("User", userSchema);
 
