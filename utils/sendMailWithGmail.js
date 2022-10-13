@@ -1,4 +1,10 @@
-// WITH GMAIL
+// WITH GMAIL requires bellow 4 datas to be in .env file
+    // 1. SENDER_MAIL
+    // 2. CLIENT_ID
+    // 3. CLIENT_SECRET
+    // 4. REFRESH_TOKEN
+
+
 const nodemailer = require("nodemailer");
 const { google } = require("googleapis");
 

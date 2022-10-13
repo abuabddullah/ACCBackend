@@ -3,6 +3,14 @@ const bcrypt = require("bcryptjs");
 const { generateToken } = require("../../utils/jwt");
 const { sendMailWithGmail } = require("../../utils/sendMailWithGmail");
 
+/**
+ *
+ * 1. reciving user detials from req.body
+ * 2. create user
+ * 3. generating token, token expires date and setling it in db UserModel
+ * 4. saving the updated info(token,expTokenDt) in db
+ * 5. sending email to user with token
+ */
 exports.signup = async (req, res, next) => {
   try {
     const userInfo = req.body;
@@ -23,6 +31,52 @@ exports.signup = async (req, res, next) => {
       user,
     });
   } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+exports.confirmEmail = async (req, res, next) => {
+  try {
+    const {token} = req.params;
+    const user = await UserModel.findOne({ confirmationToken: token });
+    if (!user) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid token",
+      });
+    }
+    const isExpired = new Date() > new Date(user.confirmationTokenExpires);
+
+    if (isExpired) {
+      return res.status(401).json({
+        status: "fail",
+        error: "Token expired",
+      });
+    }
+
+    // user.status = "active";
+    // user.confirmationToken = undefined;
+    // user.confirmationTokenExpires = undefined;
+    // await user.save({ validateBeforeSave: false });
+
+    await user.update({ status: "active", confirmationToken: undefined, confirmationTokenExpires: undefined }, { validateBeforeSave: false });
+
+    // update by id
+    // await UserModel.findByIdAndUpdate(user._id, user, {
+    //   new: true,
+    //   runValidators: false,
+    // });
+    
+    res.status(200).json({
+      success: true,
+      message: "Email confirmed successfully",
+      user
+    });
+  } catch (error) {
+    // console.log(error)
     res.status(400).json({
       success: false,
       message: error.message,
