@@ -1,0 +1,106 @@
+[{
+  "_id": {
+    "$oid": "633b87379c4dff16686ee935"
+  },
+  "products": [],
+  "status": "active",
+  "name": "aci",
+  "description": "Advanced Chemical Industries (ACI) Limited is one of the leading conglomerates in Bangladesh, with a multinational heritage. We have a mission to achieve business excellence through quality by understanding, accepting, meeting and exceeding customer expectations. We follow International Standards on Quality Management System to ensure consistent quality of products and services to achieve customer satisfaction.",
+  "email": "aci@test.com",
+  "location": "Honduras",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664845623682"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664845623682"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b876c9c4dff16686ee938"
+  },
+  "products": [],
+  "status": "active",
+  "name": "fresh",
+  "description": "Fresh – a brand name of consumer goods from Meghna Group of Industries in Bangladesh.It offers a complete range of full cream milk products, wheat flour, wheat moida, wheat semolina (suji), refined soyabean oil, vacuum salt, spice powder, mix spice, lentil, natural drinking water, refined sugar & tea.",
+  "email": "fresh@test.com",
+  "location": "Morocco",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664845676082"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664845676082"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b87b09c4dff16686ee93a"
+  },
+  "products": [],
+  "status": "active",
+  "name": "rupchanda",
+  "description": "pchanda made a foray with soyabean oil, the edible oil market was commodity-driven and the consumer awareness was extremely low. The market was dominated by ‘loose selling’- oil in readily packaged format was an unknown concept. From entering a category at a time when it was completely commodity driven to building a brand that today resonates with ‘happy family moments’ – a consumer need-state, transcending category level relations is remarkable. Every marketing activity in all spheres of Rupchanda Soyabean Oil is crafted and executed with the focused intent of improving the quality of life of its consumers.",
+  "email": "rupchanda@test.com",
+  "location": "Gulisthan",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664845744002"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664845744002"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b87c89c4dff16686ee93c"
+  },
+  "products": [],
+  "status": "active",
+  "name": "pran",
+  "description": "pchanda made a foray with soyabean oil, the edible oil market was commodity-driven and the consumer awareness was extremely low. The market was dominated by ‘loose selling’- oil in readily packaged format was an unknown concept. From entering a category at a time when it was completely commodity driven to building a brand that today resonates with ‘happy family moments’ – a consumer need-state, transcending category level relations is remarkable. Every marketing activity in all spheres of Rupchanda Soyabean Oil is crafted and executed with the focused intent of improving the quality of life of its consumers.",
+  "email": "pran@test.com",
+  "location": "Gulisthan",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664845768646"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664845768646"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b94cdf870fa37385fa281"
+  },
+  "products": [],
+  "status": "active",
+  "name": "teer",
+  "description": "pchanda made a foray with soyabean oil, the edible oil market was commodity-driven and the consumer awareness was extremely low. The market was dominated by ‘loose selling’- oil in readily packaged format was an unknown concept. From entering a category at a time when it was completely commodity driven to building a brand that today resonates with ‘happy family moments’ – a consumer need-state, transcending category level relations is remarkable. Every marketing activity in all spheres of Rupchanda Soyabean Oil is crafted and executed with the focused intent of improving the quality of life of its consumers.",
+  "email": "teer@test.com",
+  "location": "Gulisthan",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664849101667"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664849101667"
+    }
+  },
+  "__v": 0
+}]

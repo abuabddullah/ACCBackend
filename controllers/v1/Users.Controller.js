@@ -40,7 +40,7 @@ exports.signup = async (req, res, next) => {
 
 exports.confirmEmail = async (req, res, next) => {
   try {
-    const {token} = req.params;
+    const { token } = req.params;
     const user = await UserModel.findOne({ confirmationToken: token });
     if (!user) {
       return res.status(400).json({
@@ -57,23 +57,27 @@ exports.confirmEmail = async (req, res, next) => {
       });
     }
 
-    // user.status = "active";
-    // user.confirmationToken = undefined;
-    // user.confirmationTokenExpires = undefined;
+    user.status = "active";
+    user.confirmationToken = undefined;
+    user.confirmationTokenExpires = undefined;
+
+    // user.save({ validateBeforeSave: false });
     // await user.save({ validateBeforeSave: false });
 
-    await user.update({ status: "active", confirmationToken: undefined, confirmationTokenExpires: undefined }, { validateBeforeSave: false });
+    // alternative to .save()
+    await user.update(
+      {
+        status: "active",
+        confirmationToken: undefined,
+        confirmationTokenExpires: undefined,
+      },
+      { validateBeforeSave: false }
+    );
 
-    // update by id
-    // await UserModel.findByIdAndUpdate(user._id, user, {
-    //   new: true,
-    //   runValidators: false,
-    // });
-    
     res.status(200).json({
       success: true,
       message: "Email confirmed successfully",
-      user
+      user,
     });
   } catch (error) {
     // console.log(error)

@@ -1,0 +1,127 @@
+[{
+  "_id": {
+    "$oid": "633cadf72f8c23328c067590"
+  },
+  "status": "active",
+  "name": "dhaka",
+  "description": "dhaka is one of the store where we store pran, fresh, rupchanda, aci, acme products",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664921079051"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664921079051"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633cae2292adfc2d48f2f00d"
+  },
+  "status": "active",
+  "name": "chattogram",
+  "description": "chattogram is one of the store where we store pran, fresh, rupchanda, aci, acme products",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664921122355"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664921122355"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633cae2f92adfc2d48f2f00f"
+  },
+  "status": "active",
+  "name": "khulna",
+  "description": "khulna is one of the store where we store pran, fresh, rupchanda, aci, acme products",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664921135897"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664921135897"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633cae3d92adfc2d48f2f011"
+  },
+  "status": "active",
+  "name": "rajshahi",
+  "description": "rajshahi is one of the store where we store pran, fresh, rupchanda, aci, acme products",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664921149306"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664921149306"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633cae4892adfc2d48f2f013"
+  },
+  "status": "active",
+  "name": "barishal",
+  "description": "barishal is one of the store where we store pran, fresh, rupchanda, aci, acme products",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664921160335"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664921160335"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633cae5292adfc2d48f2f015"
+  },
+  "status": "active",
+  "name": "sylhet",
+  "description": "sylhet is one of the store where we store pran, fresh, rupchanda, aci, acme products",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664921170350"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664921170350"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633cae5c92adfc2d48f2f017"
+  },
+  "status": "active",
+  "name": "rangpur",
+  "description": "rangpur is one of the store where we store pran, fresh, rupchanda, aci, acme products",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664921180266"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664921180266"
+    }
+  },
+  "__v": 0
+}]

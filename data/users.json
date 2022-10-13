@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "634804793fd5bd1db47c6892"
+  },
+  "role": "buyer",
+  "status": "active",
+  "email": "samiyaasif19032018@gmail.com",
+  "password": "$2a$10$0o4rRDlLKYtapzY8VB5Mwu0H2V22eIGoZYsVS0WbNi7SIzzexDyOq",
+  "firstName": "Mezbaul Abedin",
+  "lastName": "Forhan",
+  "shippingAddress": "944 osthir Street",
+  "imageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665664121030"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665666578897"
+    }
+  },
+  "__v": 0,
+  "confirmationToken": null,
+  "confirmationTokenExpires": null
+}]

@@ -1,128 +1,256 @@
-[
-  {
-    "name": "Pran Chinigura Aromatic Rice - 5kg Bag",
-    "description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
-    "imageURLs": [
-      "https://chaldn.com/_mpimage/pran-chinigura-aromatic-rice-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D108114&q=best&v=1&m=400&webp=1",
-      "https://chaldn.com/_mpimage/pran-nazirshail-rice-5-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D48089&q=low&v=1&m=400&webp=1"
-    ],
-    "unit": "bag",
-    "category": "Rice",
-    "brand": {
-      "name": "Pran",
-      "id": "633177da56be8326a827b812"
+[{
+  "_id": {
+    "$oid": "633b8e6ef870fa37385fa271"
+  },
+  "imageURLs": [
+    "https://chaldn.com/_mpimage/pran-chinigura-aromatic-rice-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D108114&q=best&v=1&m=400&webp=1",
+    "https://chaldn.com/_mpimage/pran-nazirshail-rice-5-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D48089&q=low&v=1&m=400&webp=1"
+  ],
+  "name": "pran chinigura aromatic rice - 5kg bag",
+  "description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
+  "unit": "bag",
+  "category": "Rice",
+  "brand": {
+    "name": "Pran",
+    "id": {
+      "$oid": "633b87c89c4dff16686ee93c"
     }
   },
-  {
-    "name": "Pran Chinigura Aromatic Rice - 50kg",
-    "description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
-    "imageURLs": [
-      "https://chaldn.com/_mpimage/pran-chinigura-aromatic-rice-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D108114&q=best&v=1&m=400&webp=1",
-      "https://chaldn.com/_mpimage/pran-nazirshail-rice-5-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D48089&q=low&v=1&m=400&webp=1"
-    ],
-    "unit": "bag",
-    "category": "Rice",
-    "brand": {
-      "name": "Pran",
-      "id": "633177da56be8326a827b812"
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664847470822"
     }
   },
-
-  {
-    "name": "Pran Nazirshail Rice - 5kg",
-    "description": "Pran Nazirshail Rice. Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
-    "imageURLs": [
-      "https://chaldn.com/_mpimage/pran-nazirshail-rice-5-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D48089&q=low&v=1&m=400&webp=1",
-      "https://chaldn.com/_mpimage/pran-chinigura-aromatic-rice-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D108114&q=best&v=1&m=400&webp=1"
-    ],
-    "unit": "bag",
-    "category": "Rice",
-    "brand": {
-      "name": "Pran",
-      "id": "633177da56be8326a827b812"
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664847470822"
     }
   },
-
-  {
-    "name": "Fresh Chinigura Rice",
-    "description": "Fresh Chinigura Rice. Fresh and Clean, Vacuum Packed. Fresh Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
-    "imageURLs": [
-      "https://chaldn.com/_mpimage/fresh-chinigura-rice-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D84466&q=low&v=1&m=400&webp=1"
-    ],
-    "unit": "kg",
-    "category": "Rice",
-    "brand": {
-      "name": "Fresh",
-      "id": "6329f32f40244f2a44c85741"
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b8ea3f870fa37385fa273"
+  },
+  "imageURLs": [
+    "https://chaldn.com/_mpimage/pran-chinigura-aromatic-rice-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D108114&q=best&v=1&m=400&webp=1",
+    "https://chaldn.com/_mpimage/pran-nazirshail-rice-5-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D48089&q=low&v=1&m=400&webp=1"
+  ],
+  "name": "pran chinigura aromatic rice - 50kg",
+  "description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
+  "unit": "bag",
+  "category": "Rice",
+  "brand": {
+    "name": "Pran",
+    "id": {
+      "$oid": "633b87c89c4dff16686ee93c"
     }
   },
-
-  {
-    "name": "ACI Pure Miniket Rice Premium",
-    "description": "ACI Pure Miniket Rice Premium. Fresh and Clean, Vacuum Packed. ACI Pure Miniket Rice Premium can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
-    "imageURLs": [
-      "https://chaldn.com/_mpimage/aci-pure-miniket-rice-premium-10-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D48063&q=best&v=1&m=400&webp=1"
-    ],
-    "unit": "kg",
-    "category": "Rice",
-    "brand": {
-      "name": "ACI",
-      "id": "6329f49f9c503f0b7438b25c"
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664847523906"
     }
   },
-
-  {
-    "name": "Fresh Fortified Soyabean Oil - 5ltr",
-    "description": "Fresh Fortified Soyabean Oil follows 3 steps of refining process-Perfect Degumming & Neutralization, Balanced De-colorization and Five steps Deodorization to ensure right ratio of Omega 3 & 6 and intact Beta-carotene in Soyabean Oil. Fresh soyabean oil contain vitamin A. Its fresh and healthy.",
-    "imageURLs": [
-      "https://chaldn.com/_mpimage/fresh-fortified-soyabean-oil-5-ltr?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D93160&q=best&v=1&m=400&webp=1"
-    ],
-    "unit": "litre",
-    "category": "Oil",
-    "brand": {
-      "name": "Fresh",
-      "id": "6329f32f40244f2a44c85741"
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664847523906"
     }
   },
-  {
-    "name": "Rupchanda Fortified Soyabean Oil - 5ltr",
-    "description": "First Vitamin A fortified Soyabean Oil. Increases immunity. Strengthens bone & teeth.",
-    "imageURLs": [
-      "https://chaldn.com/_mpimage/rupchanda-fortified-soyabean-oil-5-ltr?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D92500&q=best&v=1&m=400&webp=1"
-    ],
-    "unit": "litre",
-    "category": "Oil",
-    "brand": {
-      "name": "Rupchanda",
-      "id": "6329f4a69c503f0b7438b25e"
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b8eb1f870fa37385fa275"
+  },
+  "imageURLs": [
+    "https://chaldn.com/_mpimage/pran-chinigura-aromatic-rice-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D108114&q=best&v=1&m=400&webp=1",
+    "https://chaldn.com/_mpimage/pran-nazirshail-rice-5-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D48089&q=low&v=1&m=400&webp=1"
+  ],
+  "name": "pran nazirshail rice - 5kg",
+  "description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
+  "unit": "bag",
+  "category": "Rice",
+  "brand": {
+    "name": "Pran",
+    "id": {
+      "$oid": "633b87c89c4dff16686ee93c"
     }
   },
-
-  {
-    "name": "Fresh Refined Sugar",
-    "description": "Fresh Refined sugar is a modern processes of without touching hand to protect the health of assurance. Fresh refined sugar is completely acid, fecal residues free and neat and clean, healthy, granulated sugar.",
-    "imageURLs": [
-      "https://chaldn.com/_mpimage/fresh-refined-sugar-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D113128&q=best&v=1&m=400&webp=1"
-    ],
-    "unit": "kg",
-    "category": "Sugar",
-    "brand": {
-      "name": "Fresh",
-      "id": "6329f32f40244f2a44c85741"
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664847537608"
     }
   },
-
-  {
-    "name": "Teer Refined Sugar",
-    "description": "Teer Refined sugar is a modern processes of without touching hand to protect the health of assurance. Fresh refined sugar is completely acid, fecal residues free and neat and clean, healthy, granulated sugar.",
-    "imageURLs": [
-      "https://chaldn.com/_mpimage/fresh-refined-sugar-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D113128&q=best&v=1&m=400&webp=1"
-    ],
-    "unit": "kg",
-    "category": "Sugar",
-    "brand": {
-      "name": "Teer",
-      "id": "63341b10ff782a369881024b"
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664847537608"
     }
-  }
-]
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b8ed5f870fa37385fa277"
+  },
+  "imageURLs": [
+    "https://chaldn.com/_mpimage/fresh-chinigura-rice-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D84466&q=low&v=1&m=400&webp=1"
+  ],
+  "name": "fresh chinigura rice",
+  "description": "Fresh Chinigura Rice. Fresh and Clean, Vacuum Packed. Fresh Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
+  "unit": "kg",
+  "category": "Rice",
+  "brand": {
+    "name": "Fresh",
+    "id": {
+      "$oid": "633b876c9c4dff16686ee938"
+    }
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664847573658"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664847573658"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b943bf870fa37385fa279"
+  },
+  "imageURLs": [
+    "https://chaldn.com/_mpimage/aci-pure-miniket-rice-premium-10-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D48063&q=best&v=1&m=400&webp=1"
+  ],
+  "name": "aci pure miniket rice premium",
+  "description": "ACI Pure Miniket Rice Premium. Fresh and Clean, Vacuum Packed. ACI Pure Miniket Rice Premium can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
+  "unit": "kg",
+  "category": "Rice",
+  "brand": {
+    "name": "ACI",
+    "id": {
+      "$oid": "633b87379c4dff16686ee935"
+    }
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664848955887"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664848955887"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b945ff870fa37385fa27b"
+  },
+  "imageURLs": [
+    "https://chaldn.com/_mpimage/fresh-fortified-soyabean-oil-5-ltr?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D93160&q=best&v=1&m=400&webp=1"
+  ],
+  "name": "fresh fortified soyabean oil - 5ltr",
+  "description": "Fresh Fortified Soyabean Oil follows 3 steps of refining process-Perfect Degumming & Neutralization, Balanced De-colorization and Five steps Deodorization to ensure right ratio of Omega 3 & 6 and intact Beta-carotene in Soyabean Oil. Fresh soyabean oil contain vitamin A. Its fresh and healthy.",
+  "unit": "litre",
+  "category": "Oil",
+  "brand": {
+    "name": "Fresh",
+    "id": {
+      "$oid": "633b876c9c4dff16686ee938"
+    }
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664848991465"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664848991465"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b947cf870fa37385fa27d"
+  },
+  "imageURLs": [
+    "https://chaldn.com/_mpimage/rupchanda-fortified-soyabean-oil-5-ltr?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D92500&q=best&v=1&m=400&webp=1"
+  ],
+  "name": "rupchanda fortified soyabean oil - 5ltr",
+  "description": "First Vitamin A fortified Soyabean Oil. Increases immunity. Strengthens bone & teeth.",
+  "unit": "litre",
+  "category": "Oil",
+  "brand": {
+    "name": "Rupchanda",
+    "id": {
+      "$oid": "633b87b09c4dff16686ee93a"
+    }
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664849020542"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664849020542"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b9499f870fa37385fa27f"
+  },
+  "imageURLs": [
+    "https://chaldn.com/_mpimage/fresh-refined-sugar-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D113128&q=best&v=1&m=400&webp=1"
+  ],
+  "name": "fresh refined sugar",
+  "description": "Fresh Refined sugar is a modern processes of without touching hand to protect the health of assurance. Fresh refined sugar is completely acid, fecal residues free and neat and clean, healthy, granulated sugar.",
+  "unit": "kg",
+  "category": "Sugar",
+  "brand": {
+    "name": "Fresh",
+    "id": {
+      "$oid": "633b876c9c4dff16686ee938"
+    }
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664849049680"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664849049680"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b94e7f870fa37385fa283"
+  },
+  "imageURLs": [
+    "https://chaldn.com/_mpimage/fresh-refined-sugar-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D113128&q=best&v=1&m=400&webp=1"
+  ],
+  "name": "teer refined sugar",
+  "description": "Teer Refined sugar is a modern processes of without touching hand to protect the health of assurance. Fresh refined sugar is completely acid, fecal residues free and neat and clean, healthy, granulated sugar.",
+  "unit": "kg",
+  "category": "Sugar",
+  "brand": {
+    "name": "Teer",
+    "id": {
+      "$oid": "633b94cdf870fa37385fa281"
+    }
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664849127198"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664849127198"
+    }
+  },
+  "__v": 0
+}]

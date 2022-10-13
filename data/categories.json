@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "633b967ff870fa37385fa286"
+  },
+  "name": "rice",
+  "description": "Rice is very helthy. We should eat more rice.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664849535981"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664849535981"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b968ef870fa37385fa288"
+  },
+  "name": "oil",
+  "description": "Oil is fat.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664849550968"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664849550968"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633b969af870fa37385fa28a"
+  },
+  "name": "sugar",
+  "description": "Eat less sugar",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664849562409"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664849562409"
+    }
+  },
+  "__v": 0
+}]
